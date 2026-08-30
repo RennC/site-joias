@@ -88,6 +88,18 @@ Este documento registra decisões aprovadas e seus motivos. Novas decisões deve
 
 **Motivo:** regra comercial definida pela proprietária.
 
+### D-015 — Fundação de dados e preços
+
+**Decisão:** conteúdo editável ficará em módulos tipados de `src/data/`; `src/data/pricing.ts` será a única fonte de preços, separada dos produtos, das regras e da interface.
+
+**Motivo:** impedir valores comerciais hardcoded e facilitar manutenção segura.
+
+### D-016 — Configuração portátil do GitHub Pages
+
+**Decisão:** `site` e `base` serão recebidos por variáveis de ambiente no build, e o workflow oficial do Astro fornecerá os valores do repositório no GitHub. O workflow usará a raiz no caso especial `<proprietário>.github.io` e o nome do repositório nos demais casos. Um futuro domínio próprio exigirá revisão dessa configuração.
+
+**Motivo:** permitir desenvolvimento local na raiz e publicação estática em um subdiretório do GitHub Pages sem inventar o endereço final.
+
 ## Decisões pendentes
 
 Permanecem **A DEFINIR**:

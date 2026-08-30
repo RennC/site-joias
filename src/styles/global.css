@@ -1,0 +1,34 @@
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: var(--font-family-sans);
+}
+
+body {
+  min-width: 20rem;
+  margin: 0;
+}
+
+main {
+  width: min(100% - (2 * var(--space-page-inline)), var(--content-max-width));
+  margin-inline: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

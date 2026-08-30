@@ -33,10 +33,10 @@ Se uma informação da Cambuí Artes não estiver documentada, escreva **A DEFIN
 
 - O catálogo deve ser orientado por dados em `src/data/products.ts`.
 - O FAQ deve ser orientado por dados em `src/data/faq.ts`.
-- Os feedbacks devem ser orientados por dados em `src/data/feedbacks.ts`.
+- Os feedbacks devem ser orientados por dados em `src/data/testimonials.ts`.
 - Os parceiros devem ser orientados por dados em `src/data/partners.ts`.
 - Dados gerais da marca devem ficar em `src/data/site.ts`.
-- Regras, opções e preços do configurador devem ficar separados da interface, em `src/data/configurator.ts` e em módulos de domínio tipados quando necessário.
+- Regras e opções do configurador devem ficar separadas da interface em `src/data/configurator.ts`; todos os preços devem ficar centralizados em `src/data/pricing.ts`.
 - Nunca espalhe preços dentro de páginas ou componentes.
 - Componentes não devem conter preços, contatos, contadores, links comerciais ou outros valores comerciais hardcoded.
 - A interface deve consumir dados tipados e não duplicar regras de disponibilidade, compatibilidade ou cálculo.

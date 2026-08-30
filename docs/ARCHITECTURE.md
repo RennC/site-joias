@@ -27,7 +27,8 @@ O conteúdo editável ficará separado dos componentes. A estrutura planejada é
 
 ```text
 src/data/products.ts
-src/data/feedbacks.ts
+src/data/pricing.ts
+src/data/testimonials.ts
 src/data/faq.ts
 src/data/partners.ts
 src/data/configurator.ts
@@ -41,10 +42,12 @@ Os tipos TypeScript deverão validar campos obrigatórios e impedir combinaçõe
 Arquivos públicos editáveis deverão seguir pastas previsíveis:
 
 ```text
-public/images/site/
-public/images/products/
+public/images/brand/
+public/images/owner/
+public/images/catalog/
 public/images/partners/
 public/images/configurator/
+public/images/faq/
 public/media/feedbacks/
 ```
 

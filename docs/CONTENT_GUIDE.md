@@ -4,7 +4,9 @@ Este guia define onde o conteúdo deverá ser alterado quando a implementação 
 
 ## Produtos e preços
 
-Local planejado: `src/data/products.ts`.
+Produtos: `src/data/products.ts`.
+
+Preços: `src/data/pricing.ts`.
 
 Cada produto deverá ter, no mínimo:
 
@@ -21,15 +23,16 @@ Todos os produtos deverão usar o mesmo modelo de dados e o mesmo layout. Produt
 
 ## Fotos de produtos e conteúdo institucional
 
-- Produtos: `public/images/products/`.
-- Logo, proprietária e elementos institucionais: `public/images/site/`.
+- Produtos: `public/images/catalog/`.
+- Logo e identidade: `public/images/brand/`.
+- Foto da proprietária: `public/images/owner/`.
 - Imagem genérica do resultado do configurador: `public/images/configurator/`.
 
 Ao trocar uma imagem, o caminho correspondente também deverá ser conferido no arquivo de dados. Nome de arquivo, formato e dimensões finais estão **A DEFINIR**.
 
 ## Feedbacks
 
-- Dados: `src/data/feedbacks.ts`.
+- Dados: `src/data/testimonials.ts`.
 - Fotos e vídeos: `public/media/feedbacks/`.
 
 Cada item deverá informar o tipo de mídia, caminho, texto do feedback, identificação autorizada da pessoa e texto alternativo ou descrição. Fotos avançarão após cinco segundos; vídeos, quando terminarem.
@@ -39,6 +42,8 @@ Os feedbacks e as autorizações de publicação estão **A DEFINIR**.
 ## Principais Dúvidas
 
 Local planejado: `src/data/faq.ts`.
+
+Ilustrações planejadas: `public/images/faq/`.
 
 Cada item terá uma pergunta e uma resposta curta. O texto deverá caber naturalmente nos balões da conversa entre os dois animais, evitando parágrafos extensos. Perguntas, respostas e personagens estão **A DEFINIR**.
 
@@ -71,7 +76,7 @@ Somente o nome Cambuí Artes e a URL do Instagram estão definidos.
 
 Local planejado: `src/data/configurator.ts`.
 
-Preços, opções, rótulos, imagem genérica e texto da mensagem do WhatsApp deverão ser alterados ali, sem modificar o componente visual. Consulte `CONFIGURATOR_SPEC.md` antes de qualquer mudança.
+Opções, rótulos, imagem genérica e texto da mensagem do WhatsApp deverão ser alterados ali, sem modificar o componente visual. Todos os preços ficarão em `src/data/pricing.ts`. Consulte `CONFIGURATOR_SPEC.md` antes de qualquer mudança.
 
 ## Revisão antes de publicar
 
