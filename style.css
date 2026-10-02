@@ -411,10 +411,31 @@ main {
     margin-top: 1rem;
 }
 
-.carousel-item p {
-    font-size: 1.2rem;
-    font-style: italic;
+.feedback-name {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
     color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.feedback-name::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.feedback-text {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--text-color);
+    line-height: 1.8;
+    max-width: 600px;
 }
 
 /* =========================================

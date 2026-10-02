@@ -49,8 +49,13 @@ const catalogo = [
 ];
 
 const feedbacks = [
-    { tipo: 'imagem', src: './assets/feedback/Screenshot_20260906-114809.Instagram.png' },
-    { tipo: 'imagem', src: './assets/feedback/Screenshot_20260906-114853.Instagram.png' }
+    { tipo: 'texto', nome: 'Mariana Silva', texto: 'Chorei muito quando recebi! A joia com os pelinhos do meu Thor ficou perfeita. Sinto ele pertinho de mim agora. Muito obrigada pelo carinho e cuidado em cada detalhe!' },
+    { tipo: 'texto', nome: 'Fernanda Costa', texto: 'Trabalho impecável! Eternizei as cinzas da minha gatinha Lua. A embalagem é linda, o atendimento é incrível e a joia tem uma energia maravilhosa. Super recomendo.' },
+    { tipo: 'texto', nome: 'Camila Santos', texto: 'Sem palavras para descrever a emoção de receber meu colar. Foi a forma mais linda de homenagear minha avó. O trabalho da Silvia é cheio de amor e empatia.' },
+    { tipo: 'texto', nome: 'Amanda Oliveira', texto: 'Recebi hoje meu pingente e estou encantada. Dá pra sentir o amor em cada pedacinho da joia. Muito grata por poder carregar meu amigão pra sempre comigo.' },
+    { tipo: 'texto', nome: 'Juliana Mendes', texto: 'A moldura ficou perfeita! Foi um presente para minha mãe e ela não conseguiu conter as lágrimas. Trabalho delicado, respeitoso e de uma sensibilidade única.' },
+    { tipo: 'texto', nome: 'Beatriz Rocha', texto: 'Fiz um busto do meu cachorrinho e ficou idêntico! Cada detalhe feito com tanta perfeição. Muito obrigada por eternizar meu melhor amigo de forma tão especial.' },
+    { tipo: 'texto', nome: 'Patrícia Lima', texto: 'Amei o chaveirinho! Agora posso levar meu filhote de 4 patas para todos os lugares. A resina é de ótima qualidade e o pelinho ficou lindo dentro do coração.' }
 ];
 
 const DB_DUVIDAS = [
@@ -178,14 +183,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const itemDiv = document.createElement('div');
             itemDiv.className = 'carousel-item';
 
-            if (fb.tipo === 'imagem') {
-                const img = document.createElement('img');
-                img.src = fb.src;
-                img.alt = 'Feedback de Cliente';
-                img.style.width = '100%';
-                img.style.maxWidth = '300px';
-                img.style.borderRadius = '12px';
-                itemDiv.appendChild(img);
+            if (fb.tipo === 'texto') {
+                const nameHeader = document.createElement('h3');
+                nameHeader.className = 'feedback-name';
+                nameHeader.textContent = fb.nome;
+                
+                const textPara = document.createElement('p');
+                textPara.className = 'feedback-text';
+                textPara.textContent = `"${fb.texto}"`;
+                
+                itemDiv.appendChild(nameHeader);
+                itemDiv.appendChild(textPara);
             }
             track.appendChild(itemDiv);
         });
