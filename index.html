@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambuí Artes | Joias Afetivas</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="./assets/logo/Screenshot_20260831-145254.Fotos.png" alt="Cambuí Artes Logo"
+                class="logo">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#sobre-mim">Sobre mim</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#feedbacks">Feedbacks</a></li>
+                <li><a href="#duvidas">Dúvidas</a></li>
+                <li><a href="#eternize">Eternize</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre-mim" class="section animate-on-scroll">
+            <div class="sobre-mim-box">
+                <div class="sobre-foto-container">
+                    <img src="./assets/foto-sobre/Screenshot_20260830-204524.Google.png"
+                        alt="Silvia Cambuí" class="sobre-foto" id="sobre-foto">
+                </div>
+                <div class="sobre-texto">
+                    <h2>Sobre mim</h2>
+                    <p>O que começou como uma ideia para eternizar sentimentos acabou se transformando em uma grande
+                        paixão.</p>
+                    <p>Sou a Silvia Cambuí. Há 5 anos, crio joias afetivas exclusivas e feitas à mão. Acredito que cada
+                        pedacinho da nossa história — um pelinho, cinzas, um dentinho — merece ser guardado com amor.
+                    </p>
+                    <p>Cada joia é preparada artesanalmente, respeitando o tempo do processo e valorizando o cuidado com
+                        a peça.</p>
+                    <p>É uma alegria poder fazer parte da sua história e transformar suas lembranças em algo que você
+                        possa carregar sempre pertinho do coração. Tudo isso virou o meu propósito.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalogo" class="section animate-on-scroll">
+            <h2>Catálogo</h2>
+            <div class="carousel-container-manual">
+                <button class="carousel-btn prev-btn" id="cat-prev">‹</button>
+                <div id="catalogo-grid" class="carousel-track-manual"></div>
+                <button class="carousel-btn next-btn" id="cat-next">›</button>
+            </div>
+        </section>
+
+        <section id="feedbacks" class="section animate-on-scroll">
+            <h2>Feedbacks</h2>
+            <div class="carousel-wrapper">
+                <div id="feedbacks-track" class="carousel-track"></div>
+            </div>
+        </section>
+
+        <section id="duvidas" class="section animate-on-scroll">
+            <h2>Dúvidas Frequentes</h2>
+            <div id="duvidas-container" class="accordion-container"></div>
+        </section>
+
+        <section id="eternize" class="section animate-on-scroll">
+            <h2>Eternize seu amor</h2>
+            <div class="wizard-container">
+
+                <!-- Progresso -->
+                <div class="progress-container">
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" id="wizard-progress"></div>
+                    </div>
+                    <div class="progress-text" id="wizard-progress-text">Passo 1 de 5</div>
+                </div>
+
+                <!-- Wizard Body -->
+                <div class="wizard-body" id="wizard-body">
+
+                    <!-- Passo 1: Sujeito -->
+                    <div class="wizard-step active-step" data-step="1" id="step-1">
+                        <h3 class="step-title">Quem você deseja eternizar?</h3>
+                        <div class="card-grid" id="grid-sujeito">
+                            <div class="option-card" data-group="sujeito" data-value="animal">
+                                <span class="emoji">🐾</span>
+                                <span>Meu animalzinho</span>
+                            </div>
+                            <div class="option-card" data-group="sujeito" data-value="pessoa">
+                                <span class="emoji">💖</span>
+                                <span>Pessoa que amo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Passo 2: Espécie (Injetado) -->
+                    <div class="wizard-step" data-step="2" id="step-2">
+                        <h3 class="step-title">Qual o animalzinho?</h3>
+                        <div class="card-grid" id="grid-animal">
+                            <!-- Injetado via JS -->
+                        </div>
+                        <div id="outro-animal-container" class="escondida">
+                            <input type="text" id="animal-outro" class="input-minimalista"
+                                placeholder="Digite qual animal...">
+                        </div>
+                    </div>
+
+                    <!-- Passo 3: Material -->
+                    <div class="wizard-step" data-step="3" id="step-3">
+                        <h3 class="step-title">De que forma (material)?</h3>
+                        <div class="card-grid" id="grid-material">
+                            <!-- Injetado via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Passo 4: Joia -->
+                    <div class="wizard-step" data-step="4" id="step-4">
+                        <h3 class="step-title">Qual joia você gostaria?</h3>
+                        <div class="card-grid" id="grid-joia">
+                            <!-- Injetado via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Passo 5: Personalização -->
+                    <div class="wizard-step" data-step="5" id="step-5">
+                        <h3 class="step-title">Detalhes e Personalização</h3>
+                        <div class="personalizacao-container" id="grid-personalizacao">
+                            <!-- Injetado via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Passo 6: Resumo e Preview Dinâmico (Injetado via JS) -->
+                    <div class="wizard-step" data-step="6" id="step-6">
+                        <h3 class="step-title">Resumo do seu Pedido</h3>
+                        <div id="preview-dinamico" class="preview-container">
+                            <!-- Injetado via JS -->
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Footer Fixado do Configurador -->
+                <div class="wizard-footer">
+                    <div class="wizard-price">
+                        <span class="price-label">Valor Estimado</span>
+                        <span class="price-value" id="preco-final">R$ 0,00</span>
+                    </div>
+                    <div class="wizard-actions">
+                        <button class="btn-wizard btn-voltar" id="btn-voltar" style="display: none;">Voltar</button>
+                        <button class="btn-wizard btn-avancar" id="btn-avancar" disabled>Avançar</button>
+                        <button class="btn-wizard btn-finalizar" id="btn-whatsapp" style="display: none;">Encomendar no
+                            WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+            <div class="alerta-frete">
+                ⚠️ IMPORTANTE: O frete para envio do material até o ateliê é por conta do cliente!
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p id="contador-vendas" class="contador-vendas"></p>
+        <div class="redes-sociais">
+            <a href="https://www.instagram.com/cambui.artes/" target="_blank"
+                style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent-color); text-decoration: none; font-weight: bold;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                Siga nosso Instagram
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
